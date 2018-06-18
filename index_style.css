@@ -37,7 +37,10 @@ body {
   font-size: 1.3em;
 }
 
-a {
+.footer {
+  color: #DCDDDD;
+  text-align: center;
+  font-size: 1.3em;
 }
 
 a:link, a:visited {

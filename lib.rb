@@ -40,7 +40,7 @@ def index_page
           end
         end
         hr
-        a.random_link(href: '/random_password') { 'Or click here for a random fandom' }
+        p.footer { 'Or click ' + a(href: '/random_password') { 'here' } + ' for a random fandom' }
       end
     end
   end
@@ -70,6 +70,8 @@ def password_page(password_type)
         end
         hr
         p.footnote { "It would take <span class='cracktime'>#{test_result.crack_time_display}</span> to crack that password according to " + a(href: 'https://github.com/dropbox/zxcvbn') { 'Zxcvbn' } + '.' }
+        hr
+        p.footer { 'Click ' + a(href: '/') { 'here' } + ' to return to the homepage.' }
       end
     end
   end

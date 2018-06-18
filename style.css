@@ -105,10 +105,22 @@ button:active {
   padding-bottom: 5px;
 }
 
-a {
-  text-decoration: none;
-}
-
 .cracktime {
   color: Orchid;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  font-size: 1.3em;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #AFADAE;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #DCDCC7;
 }
