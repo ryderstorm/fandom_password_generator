@@ -1,0 +1,114 @@
+body {
+  background-color: black;
+}
+
+button {
+  width: 40%;
+  margin: 0 auto;
+  /*padding: 5px;*/
+	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
+	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+	box-shadow: 0px 1px 0px 0px #1c1b18;
+	background-color:#fac628;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:2px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size: 0.9em;
+	font-weight:bold;
+	padding:12px 16px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+button:hover {
+	background-color:#d9e07e;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.index_title {
+  color: white;
+  text-align: center;
+}
+
+.index_title {
+  color: white;
+  text-align: center;
+}
+
+.wrapper {
+  width: 80%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.buttonwrapper {
+  width: 50%;
+  display: inline-flex;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding-top: 2em;
+}
+
+.choiceswrapper {
+  /*width: 50%;
+  display: inline-flex;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding-top: 2em;*/
+}
+
+.passwordtype {
+  color: #B38A58;
+}
+
+.passwordlink {
+  font-size: 1.3em;
+  color: #B38A58;
+  padding: 10px;
+}
+
+.password {
+  color: CornflowerBlue;
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.footnote {
+  color: gray;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.instructions {
+  color: #808B96;
+  font-size: 1em;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cracktime {
+  color: Orchid;
+}
