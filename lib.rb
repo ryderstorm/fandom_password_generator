@@ -58,6 +58,7 @@ def password_page(password_type)
   mab.html5 do
     head(lang: 'en') do
       title "New #{password_type} password"
+      link(rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico')
       link(href: 'style.css', rel: 'stylesheet', type: 'text/css')
       script(src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
       script(src: 'script.js')
