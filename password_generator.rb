@@ -10,8 +10,10 @@ require 'zxcvbn'
 require './lib'
 
 set :public_folder, File.dirname(__FILE__)
-# set :bind, '0.0.0.0'
-# set :port, 4567
+unless `hostname`.start_with?('damien')
+  set :bind, '0.0.0.0'
+  set :port, 80
+end
 
 get '/' do
   index_page
