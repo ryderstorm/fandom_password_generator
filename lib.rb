@@ -24,7 +24,8 @@ def index_page
   mab = Markaby::Builder.new
   mab.html5 do
     head(lang: 'en') do
-      title 'Simple password generator'
+      title 'Random Fandom Password Generator'
+      link(rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico')
       link(href: 'index_style.css', rel: 'stylesheet', type: 'text/css')
       script(src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
       script(src: 'script.js')
@@ -32,10 +33,11 @@ def index_page
     body do
       div.wrapper do
         p.index_title { 'Choose the type of password you want:' }
-        div.choiceswrapper do
+        div.options_wrapper do
           PASSWORD_TYPES.each do |type|
-            div.choice do
-              a.passwordlink(href: password_route(type)) { type }
+            div.option do
+              # a.passwordlink(href: password_route(type)) { type }
+              a.btn.btn2.btn2c(href: password_route(type)) { type }
             end
           end
         end
@@ -44,7 +46,9 @@ def index_page
       end
     end
   end
-  mab.to_s.gsub('.js"/>', '.js"></script>')
+  html = mab.to_s.gsub('.js"/>', '.js"></script>')
+  File.write('index_page.html', HtmlBeautifier.beautify(html))
+  html
 end
 
 def password_page(password_type)
