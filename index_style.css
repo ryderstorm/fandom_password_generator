@@ -1,0 +1,51 @@
+body {
+  background-color: #212020;
+}
+
+.index_title {
+  color: #DCDDDD;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.wrapper {
+  width: 80%;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+}
+
+.choiceswrapper {
+  /*width: 50%;
+  display: inline-flex;
+  position: relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  padding-top: 2em;*/
+}
+
+.passwordlink {
+  font-size: 1.3em;
+  color: #DCDCC7;
+  padding: 10px;
+}
+
+.random_link {
+  color: #AFADAE;
+  font-size: 1.3em;
+}
+
+a {
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #AFADAE;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: #DCDCC7;
+}

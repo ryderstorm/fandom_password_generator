@@ -24,8 +24,8 @@ def index_page
   mab = Markaby::Builder.new
   mab.html5 do
     head(lang: 'en') do
-      title "Simple password generator"
-      link(href: 'style.css', rel: 'stylesheet', type: 'text/css')
+      title 'Simple password generator'
+      link(href: 'index_style.css', rel: 'stylesheet', type: 'text/css')
       script(src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
       script(src: 'script.js')
     end
@@ -40,7 +40,7 @@ def index_page
           end
         end
         hr
-        a.random_title(href: '/random_password') { 'Or click here for a random fandom' }
+        a.random_link(href: '/random_password') { 'Or click here for a random fandom' }
       end
     end
   end
