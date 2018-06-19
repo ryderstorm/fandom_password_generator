@@ -12,11 +12,11 @@ PASSWORD_TYPES =
     'Silicon Valley',
     'Space',
     # 'Star Wars',
-    'Zelda',
+    'Zelda'
   ].freeze
 
 def password_route(password_type)
-  route = password_type.gsub(' ', '_').downcase
+  route = password_type.tr(' ', '_').downcase
   "/#{route}_password"
 end
 
@@ -126,17 +126,16 @@ def fallout_password
 end
 
 def got_password
-  number = (1..3).to_a.sample
-  case number
+  case (1..3).to_a.sample
   when 1
     emotion = %w[loves hates despises envies adores].sample
     "#{Faker::GameOfThrones.character} #{emotion} the #{Faker::GameOfThrones.house}."
   when 2
-    action_city = ['lives in', 'destroyed', 'demolished', 'obliterated', 'razed'].sample
-    "#{Faker::GameOfThrones.dragon} #{action_city} the city of #{Faker::GameOfThrones.city}."
+    action = ['lives in', 'destroyed', 'demolished', 'obliterated', 'razed'].sample
+    "#{Faker::GameOfThrones.dragon} #{action} the city of #{Faker::GameOfThrones.city}."
   when 3
-    action_character = %w(ate devoured scorched befriended nuzzled roasted).sample
-    "#{Faker::GameOfThrones.dragon} #{action_character} #{Faker::GameOfThrones.character}."
+    action = %w[ate devoured scorched befriended nuzzled roasted].sample
+    "#{Faker::GameOfThrones.dragon} #{action} #{Faker::GameOfThrones.character}."
   end
 end
 
@@ -149,13 +148,12 @@ def hipster_password
 end
 
 def overwatch_password
-  action = ['pwned everyone', 'lost it all', 'dominated', 'sucked', 'got a triple kill' ].sample
+  action = ['pwned everyone', 'lost it all', 'dominated', 'sucked', 'got a triple kill'].sample
   "#{Faker::Overwatch.hero} #{action} in #{Faker::Overwatch.location}"
 end
 
 def silicon_valley_password
-  number = (1..2).to_a.sample
-  case number
+  case (1..2).to_a.sample
   when 1
     "#{Faker::SiliconValley.character} created the #{Faker::SiliconValley.app} app"
   when 2
@@ -164,21 +162,19 @@ def silicon_valley_password
 end
 
 def space_password
-  number = (1..2).to_a.sample
-  location = [Faker::Space.star, Faker::Space.galaxy, Faker::Space.moon, Faker::Space.planet].sample
-  org = [Faker::Space.agency_abv, Faker::Space.company].sample
-  vessel = Faker::Space.launch_vehicule
-  case number
+  case (1..2).to_a.sample
   when 1
+    location = [Faker::Space.star, Faker::Space.galaxy, Faker::Space.moon, Faker::Space.planet].sample
     "#{Faker::Space.distance_measurement} to #{location}"
   when 2
+    org = [Faker::Space.agency_abv, Faker::Space.company].sample
+    vessel = Faker::Space.launch_vehicule
     "#{org} just launched the #{vessel}"
   end
 end
 
 def zelda_password
-  number = (1..3).to_a.sample
-  case number
+  case (1..3).to_a.sample
   when 1
     "#{Faker::Zelda.character} is exploring #{Faker::Zelda.location}"
   when 2
