@@ -126,14 +126,17 @@ def fallout_password
 end
 
 def got_password
-  emotion = %w[loves hates despises envies adores].sample
-  action = ['lives in', 'destroyed', 'demolished', 'obliterated', 'razed'].sample
-  number = (1..2).to_a.sample
+  number = (1..3).to_a.sample
   case number
   when 1
+    emotion = %w[loves hates despises envies adores].sample
     "#{Faker::GameOfThrones.character} #{emotion} the #{Faker::GameOfThrones.house}."
   when 2
-    "#{Faker::GameOfThrones.dragon} #{action} the city of #{Faker::GameOfThrones.city}."
+    action_city = ['lives in', 'destroyed', 'demolished', 'obliterated', 'razed'].sample
+    "#{Faker::GameOfThrones.dragon} #{action_city} the city of #{Faker::GameOfThrones.city}."
+  when 3
+    action_character = %w(ate devoured scorched befriended nuzzled roasted).sample
+    "#{Faker::GameOfThrones.dragon} #{action_character} #{Faker::GameOfThrones.character}."
   end
 end
 
