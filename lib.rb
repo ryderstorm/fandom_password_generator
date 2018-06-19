@@ -26,18 +26,20 @@ def index_page
     head(lang: 'en') do
       title 'Random Fandom Password Generator'
       link(rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico')
-      link(href: 'index_style.css', rel: 'stylesheet', type: 'text/css')
+      link(href: 'css/index_style.css', rel: 'stylesheet', type: 'text/css')
       script(src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-      script(src: 'script.js')
+      script(src: 'js/script.js')
     end
     body do
+      div.logowrapper do
+        img.logo(src: 'img/logo.png')
+      end
       div.wrapper do
         p.index_title { 'Choose the type of password you want:' }
         div.options_wrapper do
           PASSWORD_TYPES.each do |type|
             div.option do
-              # a.passwordlink(href: password_route(type)) { type }
-              a.btn.btn2.btn2c(href: password_route(type)) { type }
+              a.option_link.hover_grow(href: password_route(type)) { type }
             end
           end
         end
@@ -59,9 +61,9 @@ def password_page(password_type)
     head(lang: 'en') do
       title "New #{password_type} password"
       link(rel: 'icon', type: 'image/x-icon', href: '/img/favicon.ico')
-      link(href: 'style.css', rel: 'stylesheet', type: 'text/css')
+      link(href: 'css/style.css', rel: 'stylesheet', type: 'text/css')
       script(src: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
-      script(src: 'script.js')
+      script(src: 'js/script.js')
     end
     body do
       div.wrapper do
@@ -70,8 +72,8 @@ def password_page(password_type)
         hr
         p.instructions { 'Click the buttons below to copy the password to your clipboard:' }
         div.buttonwrapper do
-          button(onclick: "copyToClipboard('#copysource')") { 'Copy as is' }
-          button(onclick: "copyToClipboardLowercase('#copysource')") { 'Copy as lowercase' }
+          button.copybutton(onclick: "copyToClipboard('#copysource')") { 'Copy as is' }
+          button.copybutton(onclick: "copyToClipboardLowercase('#copysource')") { 'Copy as lowercase' }
         end
         hr
         p.footnote { "It would take <span class='cracktime'>#{test_result.crack_time_display}</span> to crack that password according to " + a(href: 'https://github.com/dropbox/zxcvbn') { 'Zxcvbn' } + '.' }

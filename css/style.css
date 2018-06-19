@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
 
-button {
+.copybutton {
   width: 40%;
   margin: 0 auto;
   /*padding: 5px;*/
@@ -24,10 +24,10 @@ button {
 	text-decoration:none;
 	text-shadow:0px 1px 0px #ffffff;
 }
-button:hover {
+.copybutton:hover {
 	background-color:#d9e07e;
 }
-button:active {
+.copybutton:active {
 	position:relative;
 	top:1px;
 }
@@ -44,6 +44,7 @@ button:active {
 
 .wrapper {
   width: 80%;
+  max-width: 500px;
   position:absolute;
   top:50%;
   left:50%;
@@ -51,23 +52,13 @@ button:active {
 }
 
 .buttonwrapper {
-  width: 50%;
+  width: 100%;
   display: inline-flex;
   position: relative;
   top:50%;
   left:50%;
   transform:translate(-50%,-50%);
-  padding-top: 2em;
-}
-
-.choiceswrapper {
-  /*width: 50%;
-  display: inline-flex;
-  position: relative;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  padding-top: 2em;*/
+  /*padding-top: 2em;*/
 }
 
 .passwordtype {
@@ -102,7 +93,7 @@ button:active {
   color: #808B96;
   font-size: 1em;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 1em;
 }
 
 .cracktime {
