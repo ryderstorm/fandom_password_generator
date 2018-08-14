@@ -46,7 +46,7 @@ def index_page
         hr
         p.footer { 'Or click ' + a(href: '/random_password') { 'here' } + ' for a random fandom' }
         hr
-        p.footer { 'See the code for this site ' + a(href: 'https://github.com/ryderstorm/fandom_password_generator') { 'on GitHub' } + '.'
+        p.footer { 'See the code for this site '  + a(href: 'https://github.com/ryderstorm/fandom_password_generator') { 'on GitHub' } + '.' }
       end
     end
   end
